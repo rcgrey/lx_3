@@ -19,7 +19,7 @@ ALLOWED_HOSTS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'NAME': 'mydatabase1',
     }
 }
 
@@ -88,7 +88,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
 
-AUTHENTICATION_BACKENDS = [
+LTI_EXTRA_PARAMETERS = [
   'django.contrib.auth.backends.ModelBackend',
   'lti_provider.auth.LTIBackend',
 ]
