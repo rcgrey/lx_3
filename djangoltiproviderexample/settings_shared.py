@@ -19,7 +19,7 @@ ALLOWED_HOSTS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase1',
+        'NAME': '/home/rmtest/lx_3/mydatabase1',
     }
 }
 
