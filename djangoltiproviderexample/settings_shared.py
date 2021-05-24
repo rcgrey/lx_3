@@ -11,7 +11,7 @@ ADMINS = []
 MANAGERS = ADMINS
 
 ALLOWED_HOSTS = [
-    'localhost', '*'
+    'localhost', 
 ]
 
 
