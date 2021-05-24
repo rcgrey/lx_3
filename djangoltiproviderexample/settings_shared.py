@@ -19,7 +19,7 @@ ALLOWED_HOSTS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/rmtest/lx_3/mydatabase1',
+        'NAME': 'mydatabase',
     }
 }
 
@@ -152,7 +152,7 @@ ACCOUNT_ACTIVATION_DAYS = 7
 LTI_TOOL_CONFIGURATION = {
     'title': 'SPL LX',
     'description': 'This is from spl lx',
-    'launch_url': 'lti/',
+    'launch_url': 'lti-1/',
     'embed_url': '',  # @todo - add an editor embed example
     'embed_icon_url': '',
     'embed_tool_id': '',
