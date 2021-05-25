@@ -68,6 +68,7 @@ class T1(generic.View):
         print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
         print('In Post')
         print(request)
+        print(request.GET)
         print(kwargs)
         print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
-        return render(request, 'main/index.html', {'b': 'post'})
+        return render(request, 'main/index.html', {'a': 'post'})
