@@ -2,14 +2,7 @@
 
 {% block content %}
 <div class="text-center well">
-    <h1>Rahul {{a}}</h1>
-    <h1>Application Landing Page</h1>
-    {% if request.user.is_anonymous %}
-        <h3>Log in via your LMS</h3>
-    {% else %}
-        <h3>Logged In</h3>
-        <p>Username: {{request.user.username}}</p>
-        <p>{{request.user.first_name}} {{request.user.last_name}}</p>
-    {% endif %}
+    <h1>SPL LX LTI</h1>
+    <h4>Submit your lx narrative.</h4>
 </div>
 {% endblock %}
