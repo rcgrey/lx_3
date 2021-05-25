@@ -49,3 +49,16 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 @method_decorator(xframe_options_exempt, name='dispatch')
 class LTIFailAuthorizationX(TemplateView):
     template_name = 'main/index.html'
+
+
+from django.views import generic
+from django.shortcuts import render
+
+class T1(generic.View):
+
+    def get(self, request, *args, **kwargs):
+
+        return render(request, 'main/index.html', {})
+
+    def post(self, request, *args, **kwargs):
+        return render(request, 'main/index.html', {})

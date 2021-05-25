@@ -9,9 +9,13 @@ from djangoltiproviderexample.main import views
 urlpatterns = [
     url(r'^$', views.IndexView.as_view()),
     url(r'^admin/', admin.site.urls),
+
     url(r'^lti/', include('lti_provider.urls')),
+
     url(r'^lti-1/', views.LTIAssignment2View.as_view()),
     url(r'^lti-2/', views.LTIFailAuthorizationX.as_view()),
+    url(r'^lti-3/', views.T1.as_view()),
+
     url(r'^assignment/1/', views.LTIAssignment1View.as_view()),
     url(r'^assignment/2/', views.LTIAssignment2View.as_view()),
     url(r'^assignment/success', TemplateView.as_view(

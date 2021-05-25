@@ -153,7 +153,7 @@ ACCOUNT_ACTIVATION_DAYS = 7
 LTI_TOOL_CONFIGURATION = {
     'title': 'SPL LX',
     'description': 'This is from spl lx',
-    'launch_url': 'lti-2/',
+    'launch_url': 'lti-3/',
     'embed_url': '',  # @todo - add an editor embed example
     'embed_icon_url': '',
     'embed_tool_id': '',
