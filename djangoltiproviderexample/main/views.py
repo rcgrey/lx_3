@@ -57,8 +57,17 @@ from django.shortcuts import render
 class T1(generic.View):
 
     def get(self, request, *args, **kwargs):
-
-        return render(request, 'main/index.html', {})
+        print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
+        print('In Get')
+        print(request)
+        print(kwargs)
+        print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
+        return render(request, 'main/index.html', {'a': 'get'})
 
     def post(self, request, *args, **kwargs):
-        return render(request, 'main/index.html', {})
+        print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
+        print('In Post')
+        print(request)
+        print(kwargs)
+        print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
+        return render(request, 'main/index.html', {'b': 'post'})
