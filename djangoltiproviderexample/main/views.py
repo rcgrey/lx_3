@@ -19,16 +19,16 @@ class IndexView(TemplateView):
 #         }
 #
 #
-# class LTIAssignment2View(LTIAuthMixin, LoginRequiredMixin, TemplateView):
-#
-#     template_name = 'main/assignment.html'
-#
-#     def get_context_data(self, **kwargs):
-#         return {
-#             'is_student': self.lti.lis_result_sourcedid(self.request),
-#             'course_title': self.lti.course_title(self.request),
-#             'number': 2
-#         }
+class LTIAssignment2View(LTIAuthMixin, LoginRequiredMixin, TemplateView):
+
+    template_name = 'main/assignment.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'is_student': self.lti.lis_result_sourcedid(self.request),
+            'course_title': self.lti.course_title(self.request),
+            'number': 2
+        }
 
 
 class LTIAssignment1View(TemplateView):
@@ -36,6 +36,16 @@ class LTIAssignment1View(TemplateView):
     template_name = 'main/assignment.html'
 
 
-class LTIAssignment2View(TemplateView):
+class LTIAssignmentx2View(LTIAuthMixin, TemplateView):
 
     template_name = 'main/assignment.html'
+
+
+
+from django.utils.decorators import method_decorator
+from django.views.decorators.clickjacking import xframe_options_exempt
+
+
+@method_decorator(xframe_options_exempt, name='dispatch')
+class LTIFailAuthorizationX(TemplateView):
+    template_name = 'main/index.html'
