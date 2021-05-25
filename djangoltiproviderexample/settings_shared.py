@@ -152,14 +152,14 @@ ACCOUNT_ACTIVATION_DAYS = 7
 LTI_TOOL_CONFIGURATION = {
     'title': 'SPL LX',
     'description': 'This is from spl lx',
-    'launch_url': 'lti-1/',
+    'launch_url': 'lti/',
     'embed_url': '',  # @todo - add an editor embed example
     'embed_icon_url': '',
     'embed_tool_id': '',
     'landing_url': '/',
     'navigation': True,
     'new_tab': True,
-    'course_aware': False,
+    'course_aware': True,
     'frame_width': 1024,
     'frame_height': 1024,
     'assignments': {
@@ -168,6 +168,7 @@ LTI_TOOL_CONFIGURATION = {
     }
 }
 
+LTI_PROPERTY_USER_USERNAME = 2
 PYLTI_CONFIG = {
     'consumers': {
         'aabb1111': {
