@@ -67,8 +67,9 @@ class T1(generic.View):
     def post(self, request, *args, **kwargs):
         print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
         print('In Post')
-        print(request)
+        print(request.POST)
         print(request.GET)
+        print(request.user)
         print(kwargs)
         print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n')
         return render(request, 'main/index.html', {'a': 'post'})
